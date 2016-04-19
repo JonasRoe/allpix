@@ -67,9 +67,12 @@ def CreateFile(Energy, FrameNb, layerList, outputMacro, OutFolder) :
 	         lineM=lineM.replace(("@EUDalpha@"), ladder.attributes['rotationZY'].value)
 	         lineM=lineM.replace(("@EUDbeta@"), ladder.attributes['rotationZX'].value)
 	         lineM=lineM.replace(("@EUDgamma@"), ladder.attributes['rotationXY'].value)
-	         lineM=lineM.replace(("@EUDalphaSensor@"), sensitive.attributes['rotation1'].value)
-	         lineM=lineM.replace(("@EUDbetaSensor@"), sensitive.attributes['rotation1'].value) 
-	         lineM=lineM.replace(("@EUDgammaSensor@"), sensitive.attributes['rotation1'].value)
+	         lineM=lineM.replace(("@EUDalphaSensor@"), ladder.attributes['rotationZY'].value)
+	         lineM=lineM.replace(("@EUDbetaSensor@"), ladder.attributes['rotationZX'].value)
+	         lineM=lineM.replace(("@EUDgammaSensor@"), ladder.attributes['rotationXY'].value)
+	        # lineM=lineM.replace(("@EUDalphaSensor@"), sensitive.attributes['rotation1'].value)
+	        # lineM=lineM.replace(("@EUDbetaSensor@"), sensitive.attributes['rotation1'].value) 
+	        # lineM=lineM.replace(("@EUDgammaSensor@"), sensitive.attributes['rotation1'].value)
 	         file_out.write(lineM)
 
     # --- Build detectors ---
